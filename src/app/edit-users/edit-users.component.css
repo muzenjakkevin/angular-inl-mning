@@ -1,11 +1,26 @@
 .container-edit-user{
     position: absolute;
     top: 8.7vh;
-    background:rgb(199, 199, 199) ;
+    background:rgb(235, 233, 233) ;
     border-radius: 7px;
     left: 850px;
     width: 400px;
     height: 120px;
+}
+
+input{
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    width: 96.5%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 7px;
+    font-size: 16px;
+    background-color: white;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 20px;
 }
 
 #button-add{
@@ -40,19 +55,4 @@
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-}
-
-input{
-    position: absolute;
-    top: 7px;
-    left: 7px;
-    width: 97.5%;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 7px;
-    font-size: 16px;
-    background-color: white;
-    background-position: 10px 10px; 
-    background-repeat: no-repeat;
-    padding: 12px 20px 12px 20px;
 }
