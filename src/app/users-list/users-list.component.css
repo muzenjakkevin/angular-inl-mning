@@ -1,0 +1,25 @@
+.container-user-list{
+    position: absolute;
+    background:rgb(199, 199, 199) ;
+    border-radius: 7px;
+    left: 400px;
+    width: 400px;
+    height: 500px;
+}
+
+#button-toggle-color{
+    position: absolute;
+    left: 70px;
+    bottom: 7px;
+    border: none;
+    border-radius: 7px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 80px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
