@@ -2,9 +2,20 @@
     position: absolute;
     background:rgb(235, 233, 233) ;
     border-radius: 7px;
-    left: 400px;
+    top: 20vh;
+    left: 8px;
     width: 400px;
     height: 500px;
+}
+
+.div-list-items{
+    position: absolute;
+    background:rgb(255, 255, 255) ;
+    border-radius: 7px;
+    top: 20vh;
+    left: 8px;
+    width: 350px;
+    height: 50px;
 }
 
 #button-toggle-color{
