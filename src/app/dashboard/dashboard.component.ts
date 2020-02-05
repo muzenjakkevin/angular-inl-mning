@@ -9,9 +9,24 @@ import { FormBuilder, FormGroup, FormArray } from '@angular/forms';
 export class DashboardComponent implements OnInit {
 
   constructor() { }
-
-  ngOnInit() {
+  
+  public userList: string[] = []; //Array sends to user-list
+  
+  
+  addUser(event){
+    this.userList.push(event);
+    console.log(this.userList);
   }
   
-  userList = [""];
+  removeUser(removeName){
+    this.userList.pop(removeName);
+    console.log(this.userList);
+  }
+
+  ngOnInit() {
+  
+  }
+
+
+
 }

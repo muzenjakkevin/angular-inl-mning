@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, FormArray } from '@angular/forms';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-edit-users',
@@ -8,19 +7,28 @@ import { FormBuilder, FormGroup, FormArray } from '@angular/forms';
 })
 export class EditUsersComponent implements OnInit {
 
+   public inputValue:string;
+   public deleteValue: string;
+  
+  @Output() public addUserChild = new EventEmitter();  //Outputing newName to dashboard
+  @Output() public removeUserChild = new EventEmitter(); //Outputting removeUser to dashboard
+
   constructor() { }
 
-  ngOnInit() {
+  //Function below emits and outputs to dashboard.
+  addUser(): void{
+    this.addUserChild.emit(this.inputValue);
+    console.log(this.addUserChild);
+  }
+
+  removeUser(): void{
+    this.removeUserChild.emit(this.deleteValue);
+    console.log('remove button works');
   }
   
   userList = [""];
   taskInput = "";
 
-  extraToAddUser(event: any){
-    this.taskInput = event.target.value;
-  }
-
-  addUser(){
-    this.userList.push(this.taskInput);
+  ngOnInit() {
   }
 }
