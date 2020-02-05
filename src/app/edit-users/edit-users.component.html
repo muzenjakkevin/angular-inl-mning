@@ -1,5 +1,6 @@
 <div class="container-edit-user">
-  <input type="text" placeholder="Your Name..">
-  <button id="button-add">Add</button>
+  <input (input)="extraToAddUser($event)" type="text" placeholder="Your Name..">
+  <li *ngFor=" let user of userList">{{user}}</li>
+  <button id="button-add" click()="addUser()">Add</button>
   <button id="button-remove">Remove</button>
 </div>

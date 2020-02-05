@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, FormArray } from '@angular/forms';
 
 @Component({
   selector: 'app-edit-users',
@@ -11,5 +12,15 @@ export class EditUsersComponent implements OnInit {
 
   ngOnInit() {
   }
+  
+  userList = [""];
+  taskInput = "";
 
+  extraToAddUser(event: any){
+    this.taskInput = event.target.value;
+  }
+
+  addUser(){
+    this.userList.push(this.taskInput);
+  }
 }
