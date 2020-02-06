@@ -1,16 +1,15 @@
 .container-user-list{
-    position: absolute;
-    overflow: scroll;
+    display: flex;
+    flex-direction: column;
     background:rgb(235, 233, 233) ;
     border-radius: 7px;
-    top: 20vh;
+    margin-top: 12.5vh;
     left: 8px;
     width: 400px;
-    height: 500px;
+    height: 80%;
 }
 
 .div-list-items{
-    position: absolute;
     background:rgb(255, 255, 255) ;
     border-radius: 7px;
     top: 20vh;
@@ -20,8 +19,7 @@
 }
 
 #button-toggle-color{
-    position: absolute;
-    left: 70px;
+    width: 90%;
     bottom: 7px;
     border: none;
     border-radius: 7px;
@@ -30,8 +28,7 @@
     padding: 15px 80px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     font-size: 16px;
-    margin: 4px 2px;
+    margin: 20px 2px 20px 20px;
     cursor: pointer;
 }
