@@ -1,6 +1,4 @@
 <div class="container-user-list">
-  <app-user-list-item [item]='item' *ngFor='let item of userListParent'>
-    <p>{{item}}</p>
-  </app-user-list-item>
+  <app-user-list-item [item]='item' *ngFor='let item of userListParent'></app-user-list-item>
   <button id="button-toggle-color" (click)='clickedButton()'>Toggle Color</button>
 </div>

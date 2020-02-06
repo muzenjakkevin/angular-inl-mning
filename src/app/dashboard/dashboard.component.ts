@@ -18,8 +18,8 @@ export class DashboardComponent implements OnInit {
     console.log(this.userList);
   }
   
-  removeUser(removeName){
-    this.userList.pop(removeName);
+  removeUser(){
+    this.userList.pop();
     console.log(this.userList);
   }
 
