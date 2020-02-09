@@ -26,9 +26,6 @@ export class EditUsersComponent implements OnInit {
     console.log('remove button works');
   }
   
-  userList = [""];
-  taskInput = "";
-
   ngOnInit() {
   }
 }

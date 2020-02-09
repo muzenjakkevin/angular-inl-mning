@@ -5,14 +5,17 @@ import { Component, OnInit, Input } from '@angular/core';
   templateUrl: './users-list.component.html',
   styleUrls: ['./users-list.component.css']
 })
+
 export class UsersListComponent implements OnInit {
   
   @Input() public userListParent;
-
-  constructor() { }
   
-  clickedButton():void{
+  constructor() { }
+
+  colorOfText(){
+    console.log("this runs");
   }
+
 
   ngOnInit() {
     console.log(this.userListParent);
