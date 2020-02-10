@@ -18,12 +18,10 @@ export class EditUsersComponent implements OnInit {
   //Function below emits and outputs to dashboard.
   addUser(): void{
     this.addUserChild.emit(this.inputValue);
-    console.log(this.addUserChild);
   }
-
+ //Function below emits and outputs to dashboard.
   removeUser(): void{
     this.removeUserChild.emit(this.deleteValue);
-    console.log('remove button works');
   }
   
   ngOnInit() {

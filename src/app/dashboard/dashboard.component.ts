@@ -12,15 +12,14 @@ export class DashboardComponent implements OnInit {
   
   public userList: string[] = []; //Array sends to user-list
   
-  
+  //Function below pushes new user to array.
   addUser(event){
     this.userList.push(event);
-    console.log(this.userList);
   }
   
+  //Function below removes user to array.
   removeUser(){
     this.userList.pop();
-    console.log(this.userList);
   }
 
   ngOnInit() {
