@@ -12,7 +12,7 @@ export class UsersListComponent implements OnInit {
   
   textColor: string = 'red';
   isStatement: boolean = false;
-
+  
   constructor() { }
 
   //Function below toggles color between user in user list item.

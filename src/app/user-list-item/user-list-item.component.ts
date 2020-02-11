@@ -6,9 +6,13 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./user-list-item.component.css']
 })
 export class UserListItemComponent implements OnInit {
+
   @Input() public user;
+  @Input() public textColor
   
   constructor() { }
+
+
   
   ngOnInit() {
   }
