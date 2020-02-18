@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, FormArray } from '@angular/forms';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -14,10 +14,10 @@ import { FormBuilder, FormGroup, FormArray } from '@angular/forms';
 
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
-  
+  constructor(private authService: AuthService) { }
+
   public userList: string[] = []; //Array sends to user-list
-  
+
   //Function below pushes new user to array.
   addUser(event){
     this.userList.push(event);
