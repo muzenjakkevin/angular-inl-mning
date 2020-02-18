@@ -5,6 +5,12 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   templateUrl: './edit-users.component.html',
   styleUrls: ['./edit-users.component.css']
 })
+
+/**
+ * @desc This class emits and outputs the two functions that give the add and remove button
+ * ability to remove names from userslist, to make it possible to use the functions in dashboard.
+*/
+
 export class EditUsersComponent implements OnInit {
 
    public inputValue:string;

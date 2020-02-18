@@ -6,6 +6,12 @@ import { FormBuilder, FormGroup, FormArray } from '@angular/forms';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
+
+/** 
+ * @desc this class holds an empty array and give the add and remove button
+ * ability to add and remove the name that is added to the users list.
+*/
+
 export class DashboardComponent implements OnInit {
 
   constructor() { }

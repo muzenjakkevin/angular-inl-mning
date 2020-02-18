@@ -6,6 +6,12 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./users-list.component.css']
 })
 
+/**
+ * @desc This class inputs the userList that is created in dashboard, for the names to show up
+ * in the user list container. It also contains a function to make it possible to switch colors
+ * of the names, between the color red and green.
+*/
+
 export class UsersListComponent implements OnInit {
   
   @Input() public userListParent;
