@@ -1,0 +1,28 @@
+.navbar{
+    left: 0px;
+    top: 0px;
+    background: navy;
+    width: 100%;
+    height: 10vh;
+    border-style: none;
+}
+
+#login {
+    position: relative;
+    top: 27px;
+    left: 45vw;
+    font-family: Arial Impact, sans-serif;
+    font-size: 1.2rem;
+    display: inline;
+    color: wheat;
+}
+
+#dashboard {
+    position: relative;
+    top: 27px;
+    left: 47vw;
+    font-family: Arial Impact, sans-serif;
+    font-size: 1.2rem;
+    display: inline;
+    color: wheat;
+}

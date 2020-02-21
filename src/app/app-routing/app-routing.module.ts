@@ -6,10 +6,12 @@ import { LoginComponent } from '../login/login.component';
 import { PageNotFoundComponent } from '../page-not-found/page-not-found.component';
 
 const routes: Routes = [
-  {path:'', component: DashboardComponent},
-  {path:'', component: SingleUserComponent},
-  {path:'', component: LoginComponent},
-  {path:'', component: PageNotFoundComponent}
+  {path:'dashboard', component: DashboardComponent},
+  {path:'singleuser', component: SingleUserComponent},
+  {path:'login', 
+    data: {title: 'login'},
+    component: LoginComponent},
+  {path:'**', component: PageNotFoundComponent}
 ];
 
 @NgModule({
