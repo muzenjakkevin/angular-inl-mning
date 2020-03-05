@@ -8,9 +8,10 @@ import { PageNotFoundComponent } from '../page-not-found/page-not-found.componen
 const routes: Routes = [
   {path:'dashboard', component: DashboardComponent},
   {path:'singleuser', component: SingleUserComponent},
-  {path:'login', 
+  {path:'', 
     data: {title: 'login'},
     component: LoginComponent},
+  {path:"login", component: LoginComponent},
   {path:'**', component: PageNotFoundComponent}
 ];
 
