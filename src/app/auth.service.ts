@@ -7,8 +7,6 @@ import { AdminFull } from '../app/models/admin-full.model';
 
 export class AuthService {
 
-  loggedUser:string;
-
   constructor() { }
 
     // public admins:AdminFull[] = [{
@@ -24,12 +22,12 @@ export class AuthService {
     // }];
 
     checkIfLoggedIn(){
-      return localStorage.getItem('user');
+      console.log(localStorage.getItem('user'));
     }
 
-    login(user){
-      localStorage.setItem('user', user)
-      this.loggedUser = user
+    login(){
+      let loggedUser:any = document.getElementById("name");
+      localStorage.setItem('user', loggedUser.value)
     }
 
     logout(){

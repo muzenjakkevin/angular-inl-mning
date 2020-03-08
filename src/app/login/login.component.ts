@@ -10,10 +10,8 @@ export class LoginComponent implements OnInit {
 
   constructor(private authService: AuthService) { }
 
-  loggedUser:string;
-
-  onSubmit(){
-    this.authService.login(this.loggedUser)
+  submitBtn(){
+    this.authService.login()
   }
 
   ngOnInit() {
