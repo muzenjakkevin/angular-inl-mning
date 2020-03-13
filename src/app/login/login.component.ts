@@ -10,8 +10,16 @@ export class LoginComponent implements OnInit {
 
   constructor(private authService: AuthService) { }
 
-  submitBtn(){
+  login(){
     this.authService.login()
+  }
+
+  logout(){
+    this.authService.logout()
+  }
+
+  checkUser(){
+    return Boolean(this.authService.checkIfLoggedIn())
   }
 
   ngOnInit() {

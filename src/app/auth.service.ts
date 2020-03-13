@@ -22,7 +22,7 @@ export class AuthService {
     // }];
 
     checkIfLoggedIn(){
-      console.log(localStorage.getItem('user'));
+      return localStorage.getItem('user');
     }
 
     login(){
@@ -31,5 +31,6 @@ export class AuthService {
     }
 
     logout(){
+      localStorage.clear();
     }
  }

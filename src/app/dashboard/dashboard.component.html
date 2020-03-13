@@ -1,3 +1,14 @@
-<app-edit-users (addUserChild)="addUser($event)" (removeUserChild)="removeUser()"></app-edit-users>
-<app-user-list-item></app-user-list-item>
-<app-users-list [userListParent]="userList"></app-users-list>
+<ng-container *ngIf = "checkUser() == true; then trueTemplate; else falseTemplate"></ng-container>
+
+<ng-template #trueTemplate>
+  <app-edit-users (addUserChild)="addUser($event)" (removeUserChild)="removeUser()"></app-edit-users>
+  <app-user-list-item></app-user-list-item>
+  <app-users-list [userListParent]="userList"></app-users-list>
+</ng-template>
+
+<ng-template #falseTemplate>
+
+  <h2>Please make sure to login before using the dashboard</h2>
+
+</ng-template>
+

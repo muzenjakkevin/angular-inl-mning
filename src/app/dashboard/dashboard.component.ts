@@ -28,10 +28,10 @@ export class DashboardComponent implements OnInit {
     this.userList.pop();
   }
 
+  checkUser(){
+    return Boolean(this.authService.checkIfLoggedIn())
+  }
   ngOnInit() {
   
   }
-
-
-
 }

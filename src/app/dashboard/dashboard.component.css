@@ -2,3 +2,9 @@ body{
     height: 100%;
     display: flex;
 }
+
+h2{
+    position: relative;
+    font-family: Arial, sans-serif;
+    left: 30vw;
+}
