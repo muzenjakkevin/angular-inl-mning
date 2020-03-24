@@ -16,7 +16,7 @@ export class DashboardComponent implements OnInit {
 
   constructor(private authService: AuthService) { }
 
-  public userList: string[] = []; //Array sends to user-list
+  public userList = []; //Array sends to user-list
 
   //Function below pushes new user to array.
   addUser(event){
@@ -32,6 +32,7 @@ export class DashboardComponent implements OnInit {
     return Boolean(this.authService.checkIfLoggedIn())
   }
   ngOnInit() {
-  
+    this.authService.getUsersFromPlaceHolder()
+      .subscribe(data => this.userList = data);
   }
 }
