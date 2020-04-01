@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth.service';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -14,7 +15,7 @@ import { AuthService } from '../auth.service';
 
 export class DashboardComponent implements OnInit {
 
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService, private userService: UserService) { }
 
   public userList = []; //Array sends to user-list
 
@@ -31,8 +32,12 @@ export class DashboardComponent implements OnInit {
   checkUser(){
     return Boolean(this.authService.checkIfLoggedIn())
   }
+
   ngOnInit() {
-    this.authService.getUsersFromPlaceHolder()
-      .subscribe(data => this.userList = data);
+    this.userService.getUsers()
+    .subscribe((data) => { this.userList = data
+      console.log(data)
+      }
+    )
   }
 }

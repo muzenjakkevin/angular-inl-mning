@@ -1,8 +1,5 @@
 import { Injectable } from '@angular/core';
 import { AdminFull } from '../app/models/admin-full.model';
-import { HttpClient } from '@angular/common/http';
-import { user } from './users';
-import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -10,9 +7,7 @@ import { Observable } from 'rxjs';
 
 export class AuthService {
 
-  private _url: string = "https://jsonplaceholder.typicode.com/users";
-
-  constructor(private http: HttpClient) { }
+  constructor() { }
 
     public admins:AdminFull[] = [{
       firstName: 'John',
@@ -25,11 +20,6 @@ export class AuthService {
       email: 'kylie.johnson@email.com',
       password: '0987654321'
     }];
-
-    //Function below gets users from jsonplaceholder
-    getUsersFromPlaceHolder(): Observable<user[]>{
-      return this.http.get<user[]>(this._url);
-    }
 
     // Function checks if local storage is true
     checkIfLoggedIn(){
