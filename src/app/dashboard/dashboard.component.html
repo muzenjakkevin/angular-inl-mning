@@ -2,7 +2,6 @@
 
 <ng-template #trueTemplate>
   <app-edit-users (addUserChild)="addUser($event)" (removeUserChild)="removeUser()"></app-edit-users>
-  <app-user-list-item></app-user-list-item>
   <app-users-list [userListParent]="userList"></app-users-list>
 </ng-template>
 

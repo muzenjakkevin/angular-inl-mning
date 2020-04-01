@@ -1,0 +1,9 @@
+div {
+    position: relative;
+    width: 25vw;
+    height: 25vh;
+    background: rgb(235, 233, 233);
+    top: 20vh;
+    left: 39vw;
+    border-radius: 5px;
+}

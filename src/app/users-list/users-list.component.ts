@@ -31,7 +31,11 @@ export class UsersListComponent implements OnInit {
   }
 
   ngOnInit() {
-    
+    // console.log(this.userListParent)
+  }
+
+  ngOnChanges(){
+    console.log(this.userListParent)
   }
 
 }

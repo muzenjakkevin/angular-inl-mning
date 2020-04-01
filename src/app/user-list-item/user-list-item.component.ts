@@ -19,8 +19,11 @@ export class UserListItemComponent implements OnInit {
   
   constructor() { }
 
-  
   ngOnInit() {
+  }
+
+  ngOnChanges(){
+    console.log(this.user)
   }
 
 }
