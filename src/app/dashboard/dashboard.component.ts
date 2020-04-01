@@ -19,6 +19,13 @@ export class DashboardComponent implements OnInit {
 
   public userList = []; //Array sends to user-list
 
+  getUsers(){
+    this.userService.getUsers()
+    .subscribe((data) => { this.userList = data
+      console.log(data)
+      }
+    )
+  }
   //Function below pushes new user to array.
   addUser(event){
     this.userList.push(event);
@@ -34,10 +41,6 @@ export class DashboardComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.userService.getUsers()
-    .subscribe((data) => { this.userList = data
-      console.log(data)
-      }
-    )
+    this.getUsers()
   }
 }
