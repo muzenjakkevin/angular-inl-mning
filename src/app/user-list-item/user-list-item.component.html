@@ -1,5 +1,3 @@
 <div class="div-container-list-item">
-  <a routerLink = '/single-user' routerLinkActive = 'active' >
-    <p [style.color]="textColor">{{user.name}}<p>
-  </a>
+  <a routerLink='/single-user/{{user.id}}' routerLinkActive='active' [style.color]="textColor" ><p>{{user.name}}</p></a>
 </div>

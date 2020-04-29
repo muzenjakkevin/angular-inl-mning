@@ -8,7 +8,8 @@ import { Observable } from 'rxjs';
 export class UserService {
 
   urls: any = {
-    users: 'https://jsonplaceholder.typicode.com/users'
+    users: 'https://jsonplaceholder.typicode.com/users',
+    usersInfo: 'https://jsonplaceholder.typicode.com/users/'
   }
 
   constructor(private http: HttpClient) { }
@@ -16,5 +17,10 @@ export class UserService {
     //Function below gets users from jsonplaceholder
     public getUsers(): Observable<any>{
       return this.http.get(this.urls.users)
+    }
+
+    //Gets single user information
+    public getUserInfo(_userId){
+      return this.http.get(this.urls.usersInfo+_userId).toPromise();
     }
 }

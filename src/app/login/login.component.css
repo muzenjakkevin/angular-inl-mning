@@ -1,46 +1,92 @@
-.login-form-container{
-    position: absolute;
-    top: 20vh;
-    background:rgb(235, 233, 233) ;
+.login-form{
     border-radius: 7px;
+    position: relative;
+    top: 10vh;
     left: 37vw;
-    width: 400px;
-    height: 180px;
+    width: 30vw;
+    height: 52vh;
+    background: rgb(231, 231, 231);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-label {
-    position: absolute;
-    color: rgb(44, 44, 44) ;
-    font-family: Arial Impact, sans-serif;
-    font-size: 1rem;
-    top: 18px;
-    left: 7px;
+.sign-in{
+    position: relative;
+    top: 3.3vh;
+    left: 1vw;
+    color: black;
 }
 
-input{
-    position: absolute;
-    top: 47px;
-    left: 7px;
-    width: 96.5%;
+input {
+    position: relative;
+    top: 5vh;
+    left: 0.8vw;
+    width: 95%;
+    padding: 17px 25px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
     box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 7px;
-    font-size: 16px;
-    background-color: white;
-    background-position: 10px 10px; 
-    background-repeat: no-repeat;
-    padding: 12px 20px 12px 20px;
+  }
+
+.invalid-feedback{
+    position: relative;
+    top: 4.5vh;
+    left: 1vw;
+    color: rgb(198, 48, 48);
 }
 
-#button-login{
+label{
+    position: relative;
+    left: 1vw;
+    top: 5vh;
+}
+
+.login-button{
     position: absolute;
-    left: 7px;
-    bottom: 7px;
+    left: 0.8vw;
+    bottom: 1.8vh;
     border: none;
     border-radius: 7px;
     background-color: #4CAF50;
     color: white;
-    padding: 15px 32px;
+    padding: 12px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+/* CSS for trueTemplate **/
+
+.logout-form{
+    border-radius: 7px;
+    position: relative;
+    top: 10vh;
+    left: 37vw;
+    width: 30vw;
+    height: 52vh;
+    background: rgb(231, 231, 231);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.logout-text{
+    position: relative;
+    top: 22vh;
+    left: 8vw;
+}
+
+.logout-button{
+    position: absolute;
+    left: 10.5vw;
+    bottom: 1.8vh;
+    border: none;
+    border-radius: 7px;
+    background-color: rgb(255, 86, 86);
+    color: white;
+    padding: 12px 40px;
     text-align: center;
     text-decoration: none;
     display: inline-block;

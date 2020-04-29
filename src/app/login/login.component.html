@@ -1,22 +1,32 @@
 <ng-container *ngIf = "checkUser() == true; then trueTemplate; else falseTemplate"></ng-container>
 
-<ng-template #trueTemplate>
-  <div class="login-form-container">
-    <form #loginForm = "ngForm">
-      <label for="username">You are logged in</label>
-      <button id="button-login" type="submit" (click)="logout()">Logout</button>
-    </form>
-  </div>
-
-</ng-template>
 <ng-template #falseTemplate>
 
-  <div class="login-form-container">
-    <form #loginForm = "ngForm">
-      <label for="username">Please log in!</label>
-      <input type="text" placeholder="Username" id="name" [(ngModel)]="username" name="name">
-      <button id="button-login" type="submit" (click)="login()">Login</button>
+  <div class="login-form">
+
+    <div class="sign-in">
+      <h3>Sign In</h3>
+    </div>
+    
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <label for="username">Email</label>
+      <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+      <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+          <div *ngIf="f.username.errors.required">Email is required</div>
+      </div>
+      <label for="password">Password</label>
+      <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+      <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+        <div *ngIf="f.password.errors.required">Password is required</div>
+      </div>
+      <button class="login-button">Sign in</button>
     </form>
   </div>
+</ng-template>
 
+<ng-template #trueTemplate>
+  <div class="logout-form">
+    <h3 class="logout-text">You are now logged in!</h3>
+    <button class="logout-button" (click)="logout()">Logout</button>
+  </div>
 </ng-template>

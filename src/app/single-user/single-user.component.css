@@ -7,3 +7,9 @@ div {
     left: 39vw;
     border-radius: 5px;
 }
+
+li{
+    position: relative;
+    margin-top: 8px;
+    top: 3.5vh;
+}
