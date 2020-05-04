@@ -6,4 +6,6 @@ export class AdminFull {
     public email: string,
     public password: string
   ) { }
+
 }
+

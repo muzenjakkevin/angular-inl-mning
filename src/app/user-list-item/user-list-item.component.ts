@@ -23,7 +23,6 @@ export class UserListItemComponent implements OnInit {
   }
 
   ngOnChanges(){
-    console.log(this.user)
   }
 
 }

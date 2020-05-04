@@ -1,4 +1,4 @@
-.login-form{
+form{
     border-radius: 7px;
     position: relative;
     top: 10vh;
@@ -9,46 +9,32 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.sign-in{
+label{
     position: relative;
-    top: 3.3vh;
-    left: 1vw;
-    color: black;
+    top: 6.5vh;
+    left: 0.8vw;
 }
 
-input {
+input{
     position: relative;
     top: 5vh;
     left: 0.8vw;
     width: 95%;
-    padding: 17px 25px;
-    margin: 8px 0;
+    padding: 12px 20px;
+    margin: 12px 0;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-  }
-
-.invalid-feedback{
-    position: relative;
-    top: 4.5vh;
-    left: 1vw;
-    color: rgb(198, 48, 48);
-}
-
-label{
-    position: relative;
-    left: 1vw;
-    top: 5vh;
 }
 
 .login-button{
     position: absolute;
-    left: 0.8vw;
+    left: 10.5vw;
     bottom: 1.8vh;
     border: none;
     border-radius: 7px;
-    background-color: #4CAF50;
+    background-color: rgb(71, 211, 111);
     color: white;
     padding: 12px 40px;
     text-align: center;

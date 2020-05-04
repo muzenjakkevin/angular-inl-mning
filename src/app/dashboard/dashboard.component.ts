@@ -22,7 +22,6 @@ export class DashboardComponent implements OnInit {
   getJsonUsers(){
     this.userService.getUsers()
     .subscribe((data) => { 
-      // console.log(data)
       this.userList = data }
     )
   }
@@ -36,7 +35,7 @@ export class DashboardComponent implements OnInit {
     this.userList.pop();
   }
 
-  checkUser(){
+  checkLocalStorage(){
     return Boolean(this.authService.checkIfLoggedIn())
   }
 

@@ -1,4 +1,4 @@
-<ng-container *ngIf = "checkUser() == true; then trueTemplate; else falseTemplate"></ng-container>
+<ng-container *ngIf = "checkLocalStorage() == true; then trueTemplate; else falseTemplate"></ng-container>
 
 <ng-template #trueTemplate>
   <app-edit-users (addUserChild)="addUser($event)" (removeUserChild)="removeUser()"></app-edit-users>
