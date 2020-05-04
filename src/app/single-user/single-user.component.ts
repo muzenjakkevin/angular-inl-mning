@@ -13,6 +13,7 @@ export class SingleUserComponent implements OnInit {
 
   constructor(private userService: UserService, private activatedRoute: ActivatedRoute) {
     
+    //Keeps track of id
     this.activatedRoute.params.subscribe(
       (params) => {
         this.user = params.id;
@@ -21,6 +22,7 @@ export class SingleUserComponent implements OnInit {
 
   }
 
+  //Holds information about users from jsonplaceholder
   ngOnInit() {
     this.userService.getUserInfo(this.user).then(
       (result) => {

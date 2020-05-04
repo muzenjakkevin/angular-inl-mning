@@ -11,13 +11,13 @@ form{
 
 label{
     position: relative;
-    top: 6.5vh;
+    top: 9.5vh;
     left: 0.8vw;
 }
 
 input{
     position: relative;
-    top: 5vh;
+    top: 8vh;
     left: 0.8vw;
     width: 95%;
     padding: 12px 20px;
@@ -26,6 +26,17 @@ input{
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+}
+
+.text-danger{
+    position: relative;
+    top: 8vh;
+    left: 0.8vw;
+    color: red;
+    background-color: #ffe2e2;
+    border: solid red 1.5px;
+    padding: 8px 16px;
+    border-radius: 3px;
 }
 
 .login-button{
@@ -43,6 +54,13 @@ input{
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+}
+
+.sign-in{
+    position: absolute;
+    z-index: 2;
+    top: 20vh;
+    left: 38vw;
 }
 
 /* CSS for trueTemplate **/

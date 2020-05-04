@@ -18,14 +18,17 @@ constructor(private authService: AuthService) {
   ngOnInit() {
   }
 
+  //Returns local storage as boolean
   checkLocalStorage(){
     return Boolean(this.authService.checkIfLoggedIn());
   }
 
+  //Submits the form and pushes value up to local storage
   onSubmit(){
     this.authService.login(this.adminLogin)
   }
 
+  //Removes item from local storage
   logout(){
     this.authService.logout()
   }

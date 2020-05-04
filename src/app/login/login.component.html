@@ -11,13 +11,20 @@
     <label for="loginUser">Email</label>
     <input type="email" 
           name="email" 
+          #emailValidation="ngModel"
           ngModel
-          requiered
+          required
+          [class.is-invalid]="emailValidation.invalid && emailValidation.touched"
+          required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
           #email="ngModel" 
           class="form-control" 
           id="email"
           [(ngModel)]="adminLogin.email"
           placeholder="Email...">
+    <div *ngIf="emailValidation.errors && (emailValidation.invalid || emailValidation.touched)">
+      <small class="text-danger" *ngIf="emailValidation.errors.required">Incorrect Email</small>
+      <small class="text-danger" *ngIf="emailValidation.errors.pattern">Incorrect Email</small>
+    </div>
 
     <label for="loginPassword">Password</label>
     <input type="password"
@@ -25,6 +32,7 @@
           ngModel
           required
           #password="ngModel"
+          [ngClass]="{ 'is-invalid': f.submitted && password.invalid }" required minlength="10"
           class="form-control" 
           id="login-password"
           [(ngModel)]="adminLogin.password"
